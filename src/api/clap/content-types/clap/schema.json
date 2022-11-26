@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "claps",
+  "info": {
+    "singularName": "clap",
+    "pluralName": "claps",
+    "displayName": "Clap"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "claps"
+    },
+    "post": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::post.post",
+      "inversedBy": "claps"
+    }
+  }
+}
